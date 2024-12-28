@@ -1,0 +1,889 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* navifation bar */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;;
+}
+
+.navLeft .navRight {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.navLeft {
+    padding-left: 40px;
+}
+
+.navLeft li {
+    display: inline-block;
+    padding: 0px 20px;
+    position: relative;
+}
+
+.navLeft li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.navLeft li a:hover {
+    color: red;
+}
+
+.navRight {
+    padding-right: 40px;
+}
+
+.navRight li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navRight li a {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+
+.navRight li a:hover {
+    color: red;
+}
+
+.searchIcon {
+    width: 24px; 
+    height: 24px;
+    transition: filter 0.3s ease; 
+}
+
+.notiIcon {
+    width: 24px; 
+    height: 24px;
+    transition: filter 0.3s ease; 
+}
+
+
+/* Dropdown styles */
+.dropdown {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Positioned below the parent */
+    left: -20px;
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+    display: none; /* Initially hidden */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 140px;
+
+}
+
+.dropdown li {
+    font-weight: bold;
+    padding: 5px 10px;
+    width: 160px;
+    }
+
+.dropdown a {
+    color: #333; /* Changed to visible text color */
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown a:hover {
+    opacity: 0.7;
+}
+
+/* Show dropdown on hover */
+.navLeft li:hover > .dropdown {
+    display: block;
+}
+
+/* Nested dropdown styles */
+.dropdown ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    width: 180px;
+}
+
+.dropdown li:hover > ul {
+    display: block;
+}
+
+/* Additional menu effects */
+.choose {
+    display: flex;
+    flex-direction: row;
+    color: rgb(25, 25, 94);
+    margin-left: 200px;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.choose a {
+    color: #11284c;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-right: 2em;
+}
+
+.choose a:hover {
+    opacity: 0.5;
+}
+  
+.navRight ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+}
+
+
+/*images*/
+:root {
+    --handle-size: 3rem;
+    --img-gap: .25rem;
+}
+
+.row {
+    width: 1251px;
+    height: 657px;
+    margin: 0px auto;
+}
+
+.row .container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%; /* Full-width container */
+    height: 100%;
+    
+}
+
+.row .slider {
+    --items-per-screen: 1; /* Default to one image per screen */
+    --slider-index: 0; /* Start at the first slide */
+    display: flex;
+    flex-grow: 1;
+    margin: 0; /* Remove margin to avoid any unwanted spacing */
+    transform: translateX(calc(var(--slider-index) * -100% / var(--items-per-screen))); /* Adjusted for items per screen */
+    transition: transform 250ms ease-in-out; /* Smooth transition */
+    width: 100%; /* Make slider fill the full width */
+    padding: 0;
+}
+
+.slider img {
+    width: 100%; /* Image takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container neatly */
+    border-radius: 102px; /* No border radius */
+}
+
+
+.row .slider > img {
+    flex: 0 0 100%; /* Each image takes up 100% of the width */
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    object-fit: cover; /* Ensure images cover the container */
+    height: 100%; /* Ensure the image's height is 100% of the container */
+    aspect-ratio: 16 / 9; /* Maintain the aspect ratio */
+    padding: 0; /* No padding between images */
+}
+
+  
+.row .slider > img:hover {
+    transform: scale(1.2); /* Scale the image by 20% */
+    z-index: 5; /* Ensure hovered image appears above others */
+}
+
+.row .handle {
+    border: none;
+    border-radius: 1rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    z-index: 10;
+    margin: var(--img-gap) 0;
+    width: var(--handle-size);
+    cursor: pointer;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    line-height: 0;
+    transition: background-color 150ms ease-in-out;
+    background: transparent;
+}
+  
+.row .left-handle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+  
+.row .right-handle {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.handle:hover,
+.handle:focus {
+    color: red;
+}
+  
+.text {
+    transition: transform 150ms ease-in-out;
+}
+  
+.handle:hover .text,
+.handle:focus .text {
+    transform: scale(1.2);
+}
+  
+.row .footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    margin: 0 auto;         
+    padding: 10px;          
+    width: 100%;           
+    max-width: 1200px;       
+    box-sizing: border-box;  
+    background-color: transparent;
+}
+
+  
+.row .title {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+.row .progress-bar {
+    display: flex;
+    gap: .25rem;
+    z-index: 10;
+  }
+
+
+.row .progress-item {
+    flex: 0 0 1.5rem;
+    min-width: 1.5rem;
+    height: .5rem;
+    background-color: rgba(255, 255, 255, .5);
+  }
+  
+.row .progress-item.active {
+    background-color: rgba(255, 255, 255, .9);
+  }
+  
+.row .imgContainer {
+    flex: 0 0 100%; /* Ensure each image takes 100% of the slider's width */
+    max-width: 100%;
+    box-sizing: border-box; /* Include padding and border in width calculations */
+    display: flex;
+} 
+
+.row .imgContainer img {
+    width: 100%; /* Image takes the full width of the container */
+    height: 100%;
+    object-fit: cover; /* Ensure proper fit */
+}
+
+.content {
+    position: absolute;
+    width: 553px;
+    height: 424px;
+    color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    background: transparent;
+    margin: 150px 50px;
+}
+.content h1 {
+    font-size: 90px;
+}
+.content h2 {
+    font-size: 50px;
+}
+.content p {
+    font-size: 18px;
+}
+.img-slideshow .button {
+    width: auto;
+    height: auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.img-slideshow .intro {
+    padding-top: 20px;
+}
+.star-rating {
+    padding: 5px;
+}
+.star {
+    color: gold;
+    font-size: 2rem;
+  }
+.button .watch-now {
+    width: 193px;
+    height: 56px;
+    border-radius: 41px;
+    background-color: rgb(236, 90, 148);
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    color: white;
+}
+.button .watch-now:hover {
+    cursor: pointer;
+    width: 220px;
+    height: 80px;
+}
+  
+.button .trailer {
+    width: 120px;
+    height: 48px;
+    border-radius: 41px;
+    background-color: rgb(0, 0, 0);
+    border-color: white;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+  
+.button .trailer:hover {
+    cursor: pointer;
+    width: 150px;
+    height: 75px;
+}
+
+
+
+
+
+
+/* Popular Celebrity Header*/
+.sliderHeader{
+    color: white;
+    padding: 40px 130px;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+/* Popular Celebrity*/
+.slider-container{
+    margin:0px auto;
+    width: 80%; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: row;
+}
+
+
+.slider-container .slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+    animation: slide 50s linear infinite; /* Sliding animation */
+    padding: 10px; /* Add some padding around the images */
+}
+
+.slider-container .slider p{
+    font-size: 20px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.slider-container .slider img{
+    width: 138px; 
+    height: 138px;
+    flex-shrink: 0; /* Prevent shrinking */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add shadow to images (optional) */
+    transition: transform 0.3s ease;
+}
+.slider-container .slider img:hover{
+    transform: scale(1.1);
+}
+
+.slider-container .slider img:hover + b p {
+    color: red;
+}
+
+@keyframes slide{
+    0% {
+      transform: translateX(0); /* Start at the beginning */
+    }
+    100% {
+      transform: translateX(-100%); /* Slide through all images */
+    }
+}
+
+/*Content Container*/
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto; 
+    gap: 80px; 
+    margin:0px 130px;
+    width: 254px;
+    height: auto;
+}
+
+.content-container .card img {
+     width: 260px;
+     height: 430px;
+     border-radius: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    position: relative; /* Ensure the transform applies correctly */
+    transition: transform 0.3s ease; /* Smooth transition when scaling */
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1); /* Increase the size of the card by 10% */
+}
+
+.card:hover p {
+    color: red;    
+}
+
+.card p {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+}
+
+
+
+
+
+.pagination {
+    display: flex;
+    gap: 30px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0px;
+    text-decoration: none;
+}
+
+.page {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8B3A3A;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.page a {
+    text-decoration: none;
+    color: white;
+}
+
+.page.active {
+    background-color: red;
+}
+
+.page:hover {
+    background-color: #a73b3b;
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    color: white;
+    background-color: #a73b3b;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.left-row {
+    padding: 50px 0px;
+    font-size: 18px;
+    margin-left: 50px;
+    font-family: "Roboto", sans-serif;
+}
+
+.left-row h5 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.left-row p {
+    padding: 5px 0px;
+}
+
+.middle-row {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-family: "Roboto", sans-serif;
+}
+
+.middle-row p {
+    padding-top: 30px;
+    font-size: 18px;
+}
+.middle-row img {
+    width: 264px;
+    height: 83px;
+}
+
+
+.right-row {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 10px;  
+    margin-top: 10px; 
+    font-family: "Roboto", sans-serif;
+}
+
+
+.right-row h5 {
+    font-size: 30px;
+    text-align: center; 
+    color: white; 
+    margin-bottom: 10px;  
+}
+
+
+.right-row .card {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;  
+    align-items: center;
+}
+
+.right-row .card img {
+    width: 30px;
+    height: 30px;
+}
+
+.right-row .card p {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.middle-row .copyright {
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+    padding-bottom: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(143, 137, 137);
+}
+
+.middle-row .copyright p{
+    font-size: 13px;
+}
+/* Tablet Styles (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Navigation adjustments */
+    .navBar {
+        padding: 20px 5px;
+    }
+
+    .navLeft, .navRight {
+        padding: 0 20px;
+    }
+
+    .navLeft li, .navRight li {
+        padding: 0 10px;
+    }
+
+    .logo {
+        margin-right: 50px;
+    }
+
+    /* Hero section adjustments */
+    .row {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        width: 80%;
+        height: 50vh;
+        margin: 80px 20px;
+    }
+
+    .content h1 {
+        font-size: 60px;
+    }
+
+    .content h2 {
+        font-size: 35px;
+    }
+
+    /* Content grid adjustments */
+    .content-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-left: 50px;
+        width: auto;
+    }
+
+    .content-container .card img {
+        width: 220px;
+        height: 365px;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile Styles (up to 767px) */
+@media screen and (max-width: 767px) {
+    /* Navigation adjustments */
+    .navBar {
+        flex-direction: column;
+        padding: 15px 5px;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .navLeft {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .navRight{
+        text-align: right;
+    }
+
+    .navLeft li, .navRight li {
+        padding: 5px 10px;
+    }
+
+    /* Dropdown adjustments */
+    .dropdown {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Hero section adjustments */
+    .content {
+        width: 90%;
+        margin: 50px auto;
+        padding: 15px;
+    }
+
+    .content h1 {
+        font-size: 3vh;
+    }
+
+    .content h2 {
+        font-size: 2.5vh;
+    }
+
+    .content p {
+        font-size: 2vh;
+    }
+
+    /* Button adjustments */
+    .button {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .button .watch-now,
+    .button .trailer {
+        width: 130px;
+        height: 30px;
+    }
+
+    /* Content grid adjustments */
+    .content-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .content-container .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    /* Popular Celebrity section */
+    .sliderHeader {
+        padding: 20px;
+        font-size: 24px;
+    }
+
+    .slider-container {
+        width: 90%;
+    }
+
+    /* Pagination adjustments */
+    .pagination {
+        gap: 15px;
+        padding: 50px 0;
+    }
+
+    .page {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .left-row {
+        margin-left: 0;
+    }
+
+    .left-row h5,
+    .right-row h5 {
+        font-size: 24px;
+    }
+
+    .middle-row {
+        width: 100%;
+    }
+
+    .middle-row img {
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .right-row .card {
+        justify-content: center;
+    }
+}
+
+/* Small Mobile Styles (up to 480px) */
+@media screen and (max-width: 480px) {
+    /* Further content grid adjustments */
+    .content-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .content-container .card {
+        margin: 0 auto;
+    }
+
+    .content-container .card img {
+        width: 280px;
+        height: auto;
+    }
+
+    /* Navigation text size */
+    .navLeft li a,
+    .navRight li a {
+        font-size: 14px;
+    }
+
+    /* Hero content */
+    .content h1 {
+        font-size: 3vh;
+    }
+
+    .content h2 {
+        font-size: 2.5vh;
+    }
+    .content p{
+        font-size: 1.25vh;
+    }
+    .star-rating{
+        display: none;
+    }
+    .button{
+        display: none;
+    }
+
+    /* Slider adjustments */
+    .slider-container .slider img {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .slider-container .slider p {
+        font-size: 16px;
+    }
+}
+
+.content-container a {
+    text-decoration: none;
+}

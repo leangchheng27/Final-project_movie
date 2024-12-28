@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+<body>
+    <!-- NAVIGATION BAR--> 
+    <header class="navBar">
+        <nav class="navLeft">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Series ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="cdrama1.html">C-DRAMA</a></li>
+                        <li><a href="kdrama1.html">K-DRAMA</a></li>
+                        <li><a href="hollywood1.html">HOLLYWOOD</a></li>
+                    </ul>
+                </li>
+                <li><a href="aboutUs.html">About us</a></li>
+            </ul>
+        </nav>
+        
+        <a href="index.html">
+            <img class="logo" src="images/Logo.png" alt="Website Logo">
+        </a>
+
+        <div class="navRight">
+            <ul>            
+                <li><a href="cdrama1.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="searchIcon"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 2a9 9 0 0 1 9 9c0 1.043-.185 2.052-.513 2.972l4.533 4.533a1 1 0 0 1-1.414 1.414l-4.533-4.533A8.97 8.97 0 0 1 11 20a9 9 0 1 1 0-18z"/></svg></a></li>
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="notiIcon"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405a2.978 2.978 0 0 0-.599-3.594L16 9V7a4 4 0 0 0-8 0v2l-3.996 3.001a2.978 2.978 0 0 0-.598 3.595L4 17h5m6 0v1a2 2 0 1 1-4 0v-1m-2 0H7"/></svg></a></li>
+                <li class="su"><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+    </header>
+    
+<!-- CONTENT -->
+<div class="contents">
+    <div class="first-header">
+        <div class="img-container">
+            <img id="main-image" src="images/co1.jpg">
+        </div>
+        <div class="text-box">
+            <h1 id="main-title">Avenger End Game</h1>
+            <div class="intro">
+                <p id="main-description">
+                    The epic conclusion to the Avengers saga. After the devastating events of Avengers: Infinity War, the surviving members of the Avengers and their allies must unite for one final battle against Thanos to undo the destruction and restore balance to the universe.
+            </div>
+            <div class="star-rating" id="main-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+            <div class="button">
+                <button class="watch-now">Watch Now</button>
+                <button class="trailer">Trailer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDER -->
+<div class="row">
+    <div class="container">
+        <button class="handle left-handle">
+            <div class="text">&#8249;</div>
+        </button>
+        <div class="slider">
+            <img src="images/3kk.jpg" data-title="Three Kingdoms" data-description="Set in the turbulent period of the late Eastern Han dynasty, Three Kingdoms follows the rise of three powerful warlords—Liu Bei, Cao Cao, and Sun Quan—who battle for supremacy over China. " data-rating="5">
+            <img src="images/co2.avif" data-title="Lie to Love" data-description="Lie to Love, a woman finds herself caught in a web of secrets and deception when she pretends to be in a fake relationship to protect her career. As she navigates this complex situation, she unexpectedly starts falling for the man who becomes her partner in the lie. " data-rating="5">
+            <img src="images/co16.jpg" data-title="Home Alone" data-description="Home Alone, young Kevin McCallister is accidentally left behind when his family goes on vacation. While home alone, Kevin must defend his house from two bumbling burglars using his wits and a series of clever traps." data-rating="5">
+            <img src="images/co4.jpg" data-title="Falling Into Your Smile" data-description="Falling Into Your Smile, a talented female esports player, who disguises herself as a man to compete, finds herself joining a professional team alongside a handsome, top-tier player. As they clash in the competitive world of gaming, sparks fly between them, leading to a romance full of rivalry, personal growth, and unexpected emotions." data-rating="5">
+            <img src="images/co5.jpg" data-title="Big Hero 6" data-description="In Big Hero 6, a young robotics prodigy named Hiro Hamada teams up with a lovable robot, Baymax, to form an unlikely superhero team. After a devastating loss, Hiro and his friends must use their skills to stop a mysterious villain threatening their city. " data-rating="5">
+            <img src="images/co6.jpg" data-title="Fast & Furious" data-description="Fast and Furious follows the high-octane adventures of Dom Toretto and his crew as they navigate a world of street racing, heists, and dangerous missions. The franchise centers around themes of family, loyalty, and adrenaline-pumping action. " data-rating="3">
+            <img src="images/co7.jpg" data-title="Final Destination" data-description="Final Destination follows a group of teenagers who narrowly escape death in a tragic accident, only to find themselves being hunted by Death itself. As the survivors try to cheat fate, they realize that Death will not be denied, and they must fight to avoid their preordained demise." data-rating="4">
+            <img src="images/co8.jpg" data-title="Goblin" data-description="Goblin (also known as Guardian: The Lonely and Great God) is a fantasy romance drama about a centuries-old goblin who seeks a human bride to end his immortality. As he forms an unlikely bond with a high school student, they navigate love, fate, and the complexities of life and death." data-rating="5">
+            <img src="images/co9.jpg" data-title="Squid Game" data-description="Squid Game follows a group of financially struggling individuals who are invited to participate in a mysterious survival game with a huge cash prize. As the contestants face deadly versions of children’s games, they must navigate the brutal challenges while confronting their darkest fears and desires." data-rating="2">
+            <img src="images/co10.jpg" data-title="San Andreas" data-description="San Andreas follows a rescue pilot, Ray Gaines, as he navigates the devastation caused by a massive earthquake along California’s San Andreas Fault. As the earth shakes, Ray must race against time to save his daughter and estranged wife, all while facing unimaginable destruction." data-rating="3">
+            <img src="images/co11.jpg" data-title="Love is Sweet" data-description="Love is Sweet is a romantic drama that follows the journey of an unlikely couple: a successful but cold CEO and a cheerful, kind-hearted woman. As they navigate their professional and personal lives, they develop a deep connection that challenges their beliefs about love and relationships." data-rating="4">
+            <img src="images/co12.webp" data-title="Our Secret" data-description="Our Secret is a heartfelt romantic drama about two individuals who share a deep, unspoken connection while navigating the challenges of life and love. As they uncover their hidden emotions and secrets, they must confront their pasts and fears to build a future together." data-rating="5">
+            <img src="images/co13.jpg" data-title="Train to Busan" data-description="Train to Busan follows a group of passengers trapped on a high-speed train as a zombie outbreak spreads across South Korea. Amid the chaos, a father and his daughter fight to survive while facing terrifying dangers, both from the infected and other survivors." data-rating="2">
+            <img src="images/co14.webp" data-title="More Than Blue" data-description="More Than Blue is a poignant romance that tells the story of K, a man with a terminal illness, who hides his condition from the woman he loves, in order to protect her from the pain of losing him. As their love story unfolds, K’s selfless devotion and the deep bond they share create an emotional journey full of love, sacrifice, and the inevitability of loss." data-rating="4">
+            <img src="images/co15.jpg" data-title="CJ7" data-description="CJ7 is a heartwarming sci-fi comedy about a poor father who strives to provide for his son while dealing with life's hardships. When he brings home a mysterious alien toy, it unexpectedly transforms into a living creature, bringing joy and chaos to their lives." data-rating="3">
+            <img src="images/co3.jpg" data-title="Cobra Kai" data-description="Cobra Kai is a martial arts drama series that follows Johnny Lawrence, the once-feared bully, as he reopens the infamous Cobra Kai dojo. As he trains a new generation of students, his rivalry with Daniel LaRusso, now a successful businessman, reignites. The series explores redemption, rivalry, and the complex dynamics of life, family, and martial arts." data-rating="5">
+        </div>        
+        <button class="handle right-handle">
+            <div class="text">&#8250;</div>
+        </button>
+    </div>
+    <div class="footer">
+        <div class="progress-bar"></div>
+    </div>
+</div>
+
+      
+      <!-- MOVIE LIST -->
+    <div class="movie-listHeader">
+        <h5>UPCOMING MOVIES</h5>
+    </div>
+    <div class="movie-list">
+        <div class="movie">
+            <img src="images/m1.png" alt="Mission Impossible">
+            <div class="content">
+                <h3>1. Mission: Impossible - The Final Reckoning</h3>
+                <p class="rating">★★★★★</p>
+                <p>One of the most prominently featured lines in the marketing for Mission: Impossible – Dead Reckoning was spoken by Henry Czerny's Eugene Kittridge, who reminds Ethan Hunt that "our lives are the sum of our choices.</p>
+                <p><strong>Director:</strong><span class="charName"> Christopher McQuarrie</span></p>
+                <p><strong>Stars:</strong><span class="charName"> Tom Cruise, Hannah Waddingham, Vanessa Kirby</span></p>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="images/m2.png" alt="Thunderbolts">
+            <div class="content">
+                <h3>2. Thunderbolt*</h3>
+                <p class="rating">★★★☆☆</p>
+                <p>A group of supervillains are recruited to go on a mission for the government.</p>
+                <p><strong>Director:</strong><span class="charName"> Jake Schreier</span></p>
+                <p><strong>Stars:</strong><span class="charName"> Florence Pugh, Sebastian Stan, Rachel Weisz</span></p>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="images/m3.png" alt="The Fantastic Four">
+            <div class="content">
+                <h3>3. The Fantastic Four</h3>
+                <p class="rating">★★★★☆</p>
+                <p>One of Marvel's most iconic families makes it back to the big screen.</p>
+                <p><strong>Director:</strong><span class="charName"> Matt Shakman</span></p>
+                <p><strong>Stars:</strong><span class="charName"> Pedro Pascal, Vanessa Kirby, Joseph Quinn</span></p>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="images/m4.png" alt="Superman: Legacy">
+            <div class="content">
+                <h3>4. Superman: Legacy</h3>
+                <p class="rating">★★★★☆</p>
+                <p>He is the embodiment of truth, justice, and the American way in a world that views this as old-fashioned.</p>
+                <p><strong>Director:</strong><span class="charName"> James Gunn</span></p>
+                <p><strong>Stars:</strong><span class="charName"> Isabela Merced, Alan Tudyk, David Corenswet</span></p>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="images/m5.png" alt="Captain America">
+            <div class="content">
+                <h3>5. Captain America: Brave New World</h3>
+                <p class="rating">★★★★★</p>
+                <p>Sam Wilson, who's officially taken up the mantle of Captain America.</p>
+                <p><strong>Director:</strong><span class="charName"> Julius Onah</span></p>
+                <p><strong>Stars:</strong><span class="charName"> Harrison Ford, Rosa Salazar, Liv Tyler</span></p>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="images/m6.png" alt="Snow White">
+            <div class="content">
+                <h3>6. Snow White</h3>
+                <p class="rating">★★★★☆</p>
+                <p>Live-action adaptation of the 1937 Disney animated film "Snow White and the Dwarfs".</p>
+                <p><strong>Director:</strong><span class="charName"> Marc Webb</span></p>
+                <p><strong>Stars:</strong><span class="charName"> Rachel Zegler, Gal Gadot, Patrick Page</span></p>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="images/m7.png" alt="Constantine 2">
+            <div class="content">
+                <h3>7. Constantine 2</h3>
+                <p class="rating">★★★★★</p>
+                <p>Reeve will reprise his role as supernatural exorcist and demonologist John Constantine.</p>
+                <p><strong>Director:</strong><span class="charName"> Francis Lawrence</span></p>
+                <p><strong>Stars:</strong><span class="charName"> Keanu Reeves, Peter Stormare</span></p>
+            </div>
+        </div>
+        <div class="movie">
+            <img src="images/m8.png" alt="Minecraft">
+            <div class="content">
+                <h3>8. A Minecraft Movie</h3>
+                <p class="rating">★★★☆☆</p>
+                <p>To get back home, they'll have to master this world while embarking on a quest with an unexpected, expert crafter.</p>
+                <p><strong>Director:</strong><span class="charName"> Jared Hess</span></p>
+                <p><strong>Stars:</strong><span class="charName"> Jack Black, Emma Myers, Jermaine Clement</span></p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- AWARD LIST -->
+    <div class="award-listHeader">
+        <h5>96th  Academy Awards<span class="winner-text"> / Winners</span></h5>
+    </div>
+    <div class="award-list">
+        <div class="award-item">
+            <img src="images/a1.png" alt="Oppenheimer">
+            <div class="name">
+                <h3>Oppenheimer</h3>
+                <p>Best Picture</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <img src="images/a2.png" alt="The Zone of Interest">
+            <div class="name">
+                <h3>The Zone of Interest</h3>
+                <p>Best International Feature Film</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <img src="images/a3.png" alt="Robert Downey Jr.">
+            <div class="name">
+                <h3>Robert Downey Jr.</h3>
+                <p>Best Supporting Actor</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <img src="images/a4.png" alt="Poor Things">
+            <div class="name">
+                <h3>Poor Things</h3>
+                <p>Best Costume Design</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <img src="images/a5.png" alt="Emma Stone">
+            <div class="name">
+                <h3>Emma Stone</h3>
+                <p>Best Actress</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <img src="images/a6.png" alt="The Boy and the Heron">
+            <div class="name">
+                <h3>The Boy and the Heron</h3>
+                <p>Best Animated Feature</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <img src="images/a7.png" alt="Anatomy of a Fall">
+            <div class="name">
+                <h3>Anatomy of a Fall</h3>
+                <p>Best Original Screenplay</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <img src="images/a8.png" alt="20 Days in Mariupol">
+            <div class="name">
+                <h3>20 Days in Mariupol</h3>
+                <p>Best Documentary Feature</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <img src="images/a9.png" alt="Cillian Murphy">
+            <div class="name>">
+                <h3>Cillian Murphy</h3>
+                <p>Best Actor</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <img src="images/a10.png" alt="Da'Vine Joy Randolph">
+            <div class="name">
+                <h3>Da'Vine Joy Randolph</h3>
+                <p>Best Supporting Actress</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <img src="images/a11.png" alt="Godzilla Minus One">
+            <div class="name">
+                <h3>Godzilla Minus One</h3>
+                <p>Best Visual Effects</p>
+            </div>
+        </div>
+        <div class="award-item">
+            <img src="images/a12.png" alt="American Fiction">
+            <div class="name">
+                <h3>American Fiction</h3>
+                <p>Best Adapted Screenplay</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="left-row">
+            <h5>CONTACT US:</h5>
+            <p>Email: Watch2Day@gmail.com</p>
+            <p>+855 23 999 888</p>
+            <p>+855 23 999 888</p>
+            <p>+855 23 999 888</p>
+        </div>
+        <div class="middle-row">
+            <img src="images/Logo.png">
+            <p>“Movies are the art of storytelling, and we are the bridge that connects you to those unforgettable tales.”</p>
+            <div class="copyright">
+                <p>Copyright © 2024 Watch2Day, All rights reserved.</p>
+            </div>
+        </div>
+
+        <div class="right-row">
+            <h5>Follow us on:</h5>
+        <div class="card">
+            <img src="images/f1.png" alt="Image 1">
+            <p>Watch2Day</p>
+        </div>
+        <div class="card">
+            <img src="images/f2.png" alt="Image 2">
+            <p>Watch2Day</p>
+        </div>
+        <div class="card">
+            <img src="images/f3.png" alt="Image 3">
+            <p>Watch2Day</p>
+        </div>
+        <div class="card">
+            <img src="images/f4.png" alt="Image 4">
+            <p>Watch2Day</p>
+        </div>
+        <div class="card">
+            <img src="images/f5.png" alt="Image 5">
+            <p>Watch2Day</p>
+        </div>
+    </div>
+</body>
+</html>
